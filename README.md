@@ -103,17 +103,16 @@ Using <a href="http://newtonjapan.com/GeoPlayer/" target=_blank>GeoPlayer</a> an
 <hr />
 
 <strong>GeoFake Class Interface</strong>
-
-@interface GeoFake : NSObject
+<pre><code>@interface GeoFake : NSObject<br />
 // Shared instance
- + (GeoFake *)sharedFake;
++ (GeoFake *)sharedFake;
 
 // Fake CoreLocation (Location update)
- - (void)setLocationManager:(CLLocationManager*)locMan mapView:(MKMapView*)mapView;
- - (void)startUpdatingLocation;
- - (void)stopUpdatingLocation;
- - (void)startUpdatingHeading;
- - (void)stopUpdatingHeading;
+- (void)setLocationManager:(CLLocationManager*)locMan mapView:(MKMapView*)mapView;
+- (void)startUpdatingLocation;
+- (void)stopUpdatingLocation;
+- (void)startUpdatingHeading;
+- (void)stopUpdatingHeading;
 
 // Fake CoreLocation (Region monitoring)
 - (void)startMonitoringForRegion:(CLRegion *)region;
@@ -126,3 +125,4 @@ Using <a href="http://newtonjapan.com/GeoPlayer/" target=_blank>GeoPlayer</a> an
 - (void)stopActivityUpdates;
 
 @end
+</code></pre>
