@@ -1,0 +1,522 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FFAF3184183FBD8E0096CFB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFAF3183183FBD8E0096CFB4 /* Foundation.framework */; };
+		FFAF3186183FBD8E0096CFB4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFAF3185183FBD8E0096CFB4 /* CoreGraphics.framework */; };
+		FFAF3188183FBD8E0096CFB4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFAF3187183FBD8E0096CFB4 /* UIKit.framework */; };
+		FFAF318E183FBD8E0096CFB4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FFAF318C183FBD8E0096CFB4 /* InfoPlist.strings */; };
+		FFAF3190183FBD8E0096CFB4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAF318F183FBD8E0096CFB4 /* main.m */; };
+		FFAF3194183FBD8E0096CFB4 /* GeoFenceAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAF3193183FBD8E0096CFB4 /* GeoFenceAppDelegate.m */; };
+		FFAF3197183FBD8E0096CFB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFAF3195183FBD8E0096CFB4 /* Main.storyboard */; };
+		FFAF319A183FBD8E0096CFB4 /* GeoFenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAF3199183FBD8E0096CFB4 /* GeoFenceViewController.m */; };
+		FFAF319C183FBD8E0096CFB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFAF319B183FBD8E0096CFB4 /* Images.xcassets */; };
+		FFAF31A3183FBD8E0096CFB4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFAF31A2183FBD8E0096CFB4 /* XCTest.framework */; };
+		FFAF31A4183FBD8E0096CFB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFAF3183183FBD8E0096CFB4 /* Foundation.framework */; };
+		FFAF31A5183FBD8E0096CFB4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFAF3187183FBD8E0096CFB4 /* UIKit.framework */; };
+		FFAF31AD183FBD8E0096CFB4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FFAF31AB183FBD8E0096CFB4 /* InfoPlist.strings */; };
+		FFAF31AF183FBD8E0096CFB4 /* GeoFenceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAF31AE183FBD8E0096CFB4 /* GeoFenceTests.m */; };
+		FFAF31B9183FBDA90096CFB4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFAF31B8183FBDA90096CFB4 /* MapKit.framework */; };
+		FFAF31BC183FC0AF0096CFB4 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAF31BB183FC0AF0096CFB4 /* WebViewController.m */; };
+		FFAF31BE183FC5AE0096CFB4 /* target.png in Resources */ = {isa = PBXBuildFile; fileRef = FFAF31BD183FC5AE0096CFB4 /* target.png */; };
+		FFDDCDED18949471004EBFEC /* GeoFake.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFDDCDEC18949471004EBFEC /* GeoFake.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FFAF31A6183FBD8E0096CFB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFAF3178183FBD8E0096CFB4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFAF317F183FBD8E0096CFB4;
+			remoteInfo = GeoFence;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FFAF3180183FBD8E0096CFB4 /* GeoFence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoFence.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFAF3183183FBD8E0096CFB4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FFAF3185183FBD8E0096CFB4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FFAF3187183FBD8E0096CFB4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FFAF318B183FBD8E0096CFB4 /* GeoFence-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GeoFence-Info.plist"; sourceTree = "<group>"; };
+		FFAF318D183FBD8E0096CFB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FFAF318F183FBD8E0096CFB4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FFAF3191183FBD8E0096CFB4 /* GeoFence-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GeoFence-Prefix.pch"; sourceTree = "<group>"; };
+		FFAF3192183FBD8E0096CFB4 /* GeoFenceAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeoFenceAppDelegate.h; sourceTree = "<group>"; };
+		FFAF3193183FBD8E0096CFB4 /* GeoFenceAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoFenceAppDelegate.m; sourceTree = "<group>"; };
+		FFAF3196183FBD8E0096CFB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FFAF3198183FBD8E0096CFB4 /* GeoFenceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeoFenceViewController.h; sourceTree = "<group>"; };
+		FFAF3199183FBD8E0096CFB4 /* GeoFenceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoFenceViewController.m; sourceTree = "<group>"; };
+		FFAF319B183FBD8E0096CFB4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FFAF31A1183FBD8E0096CFB4 /* GeoFenceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoFenceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFAF31A2183FBD8E0096CFB4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FFAF31AA183FBD8E0096CFB4 /* GeoFenceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GeoFenceTests-Info.plist"; sourceTree = "<group>"; };
+		FFAF31AC183FBD8E0096CFB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FFAF31AE183FBD8E0096CFB4 /* GeoFenceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoFenceTests.m; sourceTree = "<group>"; };
+		FFAF31B8183FBDA90096CFB4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FFAF31BA183FC0AF0096CFB4 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		FFAF31BB183FC0AF0096CFB4 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		FFAF31BD183FC5AE0096CFB4 /* target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = target.png; sourceTree = "<group>"; };
+		FFDDCDEC18949471004EBFEC /* GeoFake.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GeoFake.framework; path = "../GeoPlayer/_GeoFake_framework/GeoFakeFramework/build/Release-framework/GeoFake.framework"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FFAF317D183FBD8E0096CFB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFDDCDED18949471004EBFEC /* GeoFake.framework in Frameworks */,
+				FFAF3186183FBD8E0096CFB4 /* CoreGraphics.framework in Frameworks */,
+				FFAF3188183FBD8E0096CFB4 /* UIKit.framework in Frameworks */,
+				FFAF31B9183FBDA90096CFB4 /* MapKit.framework in Frameworks */,
+				FFAF3184183FBD8E0096CFB4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFAF319E183FBD8E0096CFB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFAF31A3183FBD8E0096CFB4 /* XCTest.framework in Frameworks */,
+				FFAF31A5183FBD8E0096CFB4 /* UIKit.framework in Frameworks */,
+				FFAF31A4183FBD8E0096CFB4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FFAF3177183FBD8E0096CFB4 = {
+			isa = PBXGroup;
+			children = (
+				FFAF3189183FBD8E0096CFB4 /* GeoFence */,
+				FFAF31A8183FBD8E0096CFB4 /* GeoFenceTests */,
+				FFAF3182183FBD8E0096CFB4 /* Frameworks */,
+				FFAF3181183FBD8E0096CFB4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FFAF3181183FBD8E0096CFB4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FFAF3180183FBD8E0096CFB4 /* GeoFence.app */,
+				FFAF31A1183FBD8E0096CFB4 /* GeoFenceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FFAF3182183FBD8E0096CFB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FFDDCDEC18949471004EBFEC /* GeoFake.framework */,
+				FFAF31B8183FBDA90096CFB4 /* MapKit.framework */,
+				FFAF3183183FBD8E0096CFB4 /* Foundation.framework */,
+				FFAF3185183FBD8E0096CFB4 /* CoreGraphics.framework */,
+				FFAF3187183FBD8E0096CFB4 /* UIKit.framework */,
+				FFAF31A2183FBD8E0096CFB4 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FFAF3189183FBD8E0096CFB4 /* GeoFence */ = {
+			isa = PBXGroup;
+			children = (
+				FFAF3192183FBD8E0096CFB4 /* GeoFenceAppDelegate.h */,
+				FFAF3193183FBD8E0096CFB4 /* GeoFenceAppDelegate.m */,
+				FFAF3195183FBD8E0096CFB4 /* Main.storyboard */,
+				FFAF3198183FBD8E0096CFB4 /* GeoFenceViewController.h */,
+				FFAF3199183FBD8E0096CFB4 /* GeoFenceViewController.m */,
+				FFAF31BA183FC0AF0096CFB4 /* WebViewController.h */,
+				FFAF31BB183FC0AF0096CFB4 /* WebViewController.m */,
+				FFAF319B183FBD8E0096CFB4 /* Images.xcassets */,
+				FFAF318A183FBD8E0096CFB4 /* Supporting Files */,
+			);
+			path = GeoFence;
+			sourceTree = "<group>";
+		};
+		FFAF318A183FBD8E0096CFB4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FFAF318B183FBD8E0096CFB4 /* GeoFence-Info.plist */,
+				FFAF318C183FBD8E0096CFB4 /* InfoPlist.strings */,
+				FFAF318F183FBD8E0096CFB4 /* main.m */,
+				FFAF3191183FBD8E0096CFB4 /* GeoFence-Prefix.pch */,
+				FFAF31BD183FC5AE0096CFB4 /* target.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FFAF31A8183FBD8E0096CFB4 /* GeoFenceTests */ = {
+			isa = PBXGroup;
+			children = (
+				FFAF31AE183FBD8E0096CFB4 /* GeoFenceTests.m */,
+				FFAF31A9183FBD8E0096CFB4 /* Supporting Files */,
+			);
+			path = GeoFenceTests;
+			sourceTree = "<group>";
+		};
+		FFAF31A9183FBD8E0096CFB4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FFAF31AA183FBD8E0096CFB4 /* GeoFenceTests-Info.plist */,
+				FFAF31AB183FBD8E0096CFB4 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FFAF317F183FBD8E0096CFB4 /* GeoFence */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFAF31B2183FBD8E0096CFB4 /* Build configuration list for PBXNativeTarget "GeoFence" */;
+			buildPhases = (
+				FFAF317C183FBD8E0096CFB4 /* Sources */,
+				FFAF317D183FBD8E0096CFB4 /* Frameworks */,
+				FFAF317E183FBD8E0096CFB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeoFence;
+			productName = GeoFence;
+			productReference = FFAF3180183FBD8E0096CFB4 /* GeoFence.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FFAF31A0183FBD8E0096CFB4 /* GeoFenceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFAF31B5183FBD8E0096CFB4 /* Build configuration list for PBXNativeTarget "GeoFenceTests" */;
+			buildPhases = (
+				FFAF319D183FBD8E0096CFB4 /* Sources */,
+				FFAF319E183FBD8E0096CFB4 /* Frameworks */,
+				FFAF319F183FBD8E0096CFB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FFAF31A7183FBD8E0096CFB4 /* PBXTargetDependency */,
+			);
+			name = GeoFenceTests;
+			productName = GeoFenceTests;
+			productReference = FFAF31A1183FBD8E0096CFB4 /* GeoFenceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FFAF3178183FBD8E0096CFB4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = GeoFence;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Newton Japan";
+				TargetAttributes = {
+					FFAF317F183FBD8E0096CFB4 = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					FFAF31A0183FBD8E0096CFB4 = {
+						TestTargetID = FFAF317F183FBD8E0096CFB4;
+					};
+				};
+			};
+			buildConfigurationList = FFAF317B183FBD8E0096CFB4 /* Build configuration list for PBXProject "GeoFence" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FFAF3177183FBD8E0096CFB4;
+			productRefGroup = FFAF3181183FBD8E0096CFB4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FFAF317F183FBD8E0096CFB4 /* GeoFence */,
+				FFAF31A0183FBD8E0096CFB4 /* GeoFenceTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FFAF317E183FBD8E0096CFB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFAF31BE183FC5AE0096CFB4 /* target.png in Resources */,
+				FFAF319C183FBD8E0096CFB4 /* Images.xcassets in Resources */,
+				FFAF318E183FBD8E0096CFB4 /* InfoPlist.strings in Resources */,
+				FFAF3197183FBD8E0096CFB4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFAF319F183FBD8E0096CFB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFAF31AD183FBD8E0096CFB4 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FFAF317C183FBD8E0096CFB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFAF319A183FBD8E0096CFB4 /* GeoFenceViewController.m in Sources */,
+				FFAF3194183FBD8E0096CFB4 /* GeoFenceAppDelegate.m in Sources */,
+				FFAF3190183FBD8E0096CFB4 /* main.m in Sources */,
+				FFAF31BC183FC0AF0096CFB4 /* WebViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFAF319D183FBD8E0096CFB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFAF31AF183FBD8E0096CFB4 /* GeoFenceTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FFAF31A7183FBD8E0096CFB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFAF317F183FBD8E0096CFB4 /* GeoFence */;
+			targetProxy = FFAF31A6183FBD8E0096CFB4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FFAF318C183FBD8E0096CFB4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FFAF318D183FBD8E0096CFB4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FFAF3195183FBD8E0096CFB4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FFAF3196183FBD8E0096CFB4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FFAF31AB183FBD8E0096CFB4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FFAF31AC183FBD8E0096CFB4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FFAF31B0183FBD8E0096CFB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FFAF31B1183FBD8E0096CFB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FFAF31B3183FBD8E0096CFB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					../../,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GeoFence/GeoFence-Prefix.pch";
+				INFOPLIST_FILE = "GeoFence/GeoFence-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FFAF31B4183FBD8E0096CFB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					../../,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GeoFence/GeoFence-Prefix.pch";
+				INFOPLIST_FILE = "GeoFence/GeoFence-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		FFAF31B6183FBD8E0096CFB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GeoFence.app/GeoFence";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GeoFence/GeoFence-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "GeoFenceTests/GeoFenceTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		FFAF31B7183FBD8E0096CFB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GeoFence.app/GeoFence";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GeoFence/GeoFence-Prefix.pch";
+				INFOPLIST_FILE = "GeoFenceTests/GeoFenceTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FFAF317B183FBD8E0096CFB4 /* Build configuration list for PBXProject "GeoFence" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFAF31B0183FBD8E0096CFB4 /* Debug */,
+				FFAF31B1183FBD8E0096CFB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFAF31B2183FBD8E0096CFB4 /* Build configuration list for PBXNativeTarget "GeoFence" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFAF31B3183FBD8E0096CFB4 /* Debug */,
+				FFAF31B4183FBD8E0096CFB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFAF31B5183FBD8E0096CFB4 /* Build configuration list for PBXNativeTarget "GeoFenceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFAF31B6183FBD8E0096CFB4 /* Debug */,
+				FFAF31B7183FBD8E0096CFB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FFAF3178183FBD8E0096CFB4 /* Project object */;
+}
