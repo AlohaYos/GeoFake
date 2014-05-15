@@ -11,7 +11,7 @@
 
 #pragma mark - GeoFence distance
 
-#define FENCE_1		100.0
+#define FENCE_1		250.0
 #define FENCE_2		500.0
 #define FENCE_3		1000.0
 
@@ -72,6 +72,11 @@
 	CLCircularRegion	*_regionNearby;
 	CLCircularRegion	*_regionBlock;
 	CLCircularRegion	*_regionTown;
+	
+	// Beacon
+	NSUUID				*_uuid;
+	CLBeaconRegion		*_beaconRegion;
+    NSMutableArray		*_beacons;
 }
 
 - (void)viewDidLoad
@@ -96,7 +101,6 @@
 #endif
 
 	[self setGeofenceAt:_centerLocation];
-	[self monitoring:YES];
 
 	if(_didLoadData) {
 		MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(_centerLocation, (FENCE_3*3.0), (FENCE_3*3.0));
@@ -108,6 +112,11 @@
 		[_mapView setRegion:region animated:YES];
 		_fenceSwitch.on = NO;
 	}
+
+	_uuid = [[NSUUID alloc] initWithUUIDString:@"E2C56DB5-DFFB-48D2-B060-D0F5A71096E0"];
+	_beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:_uuid identifier:[_uuid UUIDString]];
+
+	[self monitoring:YES];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -160,20 +169,21 @@
 		[_locationManager requestStateForRegion:_regionNearby];
 		NSSet* regions=[_locationManager monitoredRegions];
 #endif
+		[_locationManager startRangingBeaconsInRegion:_beaconRegion];
 	}
 	else {
 #ifdef	GEO_FAKE
 		NSArray *regions = [[[GeoFake sharedFake] monitoredRegions] allObjects];
+		for (int i = 0; i < [regions count]; i++) {
+			[[GeoFake sharedFake] stopMonitoringForRegion:[regions objectAtIndex:i]];
+		}
 #else
 		NSArray *regions = [[_locationManager monitoredRegions] allObjects];
-#endif
 		for (int i = 0; i < [regions count]; i++) {
-#ifdef	GEO_FAKE
-			[[GeoFake sharedFake] stopMonitoringForRegion:[regions objectAtIndex:i]];
-#else
 			[_locationManager stopMonitoringForRegion:[regions objectAtIndex:i]];
-#endif
 		}
+#endif
+		[_locationManager stopRangingBeaconsInRegion:_beaconRegion];
 	}
 }
 
@@ -243,6 +253,45 @@
 		[[UIApplication sharedApplication] presentLocalNotificationNow:notification];
 	}
 }
+
+#pragma mark - Beacon job
+
+- (void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
+{
+	static int immediateBeaconMajor = -1;
+	static int immediateBeaconMinor = -1;
+	
+	BOOL immediateItem = NO;
+	for(CLBeacon *beacon in beacons) {
+		if(beacon.proximity == CLProximityImmediate) {
+			NSLog(@"Detect iBeacon");
+			immediateItem = YES;
+			if((immediateBeaconMajor != [beacon.major intValue])||(immediateBeaconMinor != [beacon.minor intValue])) {
+				immediateBeaconMajor = [beacon.major intValue];
+				immediateBeaconMinor = [beacon.minor intValue];
+				
+				[self openWebPageMajor:[NSNumber numberWithInt:5] minor:[NSNumber numberWithInt:10]];
+				UILocalNotification *notification = [[UILocalNotification alloc] init];
+				notification.alertBody = @"Detect iBeacon";
+				notification.soundName = UILocalNotificationDefaultSoundName;
+				
+				[[UIApplication sharedApplication] cancelAllLocalNotifications];
+				[[UIApplication sharedApplication] presentLocalNotificationNow:notification];
+			}
+			break;
+		}
+	}
+	
+	if([beacons count] > 0) {
+		if(immediateItem == NO) {
+			NSLog(@"Lost iBeacon");
+			immediateBeaconMajor = -1;
+			immediateBeaconMinor = -1;
+			[self closeWebPage];
+		}
+	}
+}
+
 
 #pragma mark - Map job
 
