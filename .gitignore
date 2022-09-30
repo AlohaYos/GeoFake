@@ -1,1 +1,4 @@
 DerivedData/
+*.xcsettings
+*.xcscheme
+Code/GeoFake/GeoFake-Prefix.pch

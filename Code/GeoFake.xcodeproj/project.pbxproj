@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		FF96F0E4187A0D640022A80B /* GeoFake.framework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = FF96F0E5187A0D640022A80B /* Build configuration list for PBXAggregateTarget "GeoFake.framework" */;
+			buildPhases = (
+				FF96F0E8187A0DB80022A80B /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = GeoFake.framework;
+			productName = GeoFake.framework;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		FF1879CF1925676700E05950 /* GeoFake.m in Sources */ = {isa = PBXBuildFile; fileRef = FF96F0BF187A0A5C0022A80B /* GeoFake.m */; };
+		FF96F0B9187A0A5C0022A80B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF96F0B8187A0A5C0022A80B /* Foundation.framework */; };
+		FF96F0C7187A0A5C0022A80B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF96F0C6187A0A5C0022A80B /* XCTest.framework */; };
+		FF96F0C8187A0A5C0022A80B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF96F0B8187A0A5C0022A80B /* Foundation.framework */; };
+		FF96F0CA187A0A5C0022A80B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF96F0C9187A0A5C0022A80B /* UIKit.framework */; };
+		FF96F0CD187A0A5C0022A80B /* libGeoFake.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF96F0B5187A0A5C0022A80B /* libGeoFake.a */; };
+		FF96F0D3187A0A5C0022A80B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF96F0D1187A0A5C0022A80B /* InfoPlist.strings */; };
+		FF96F0D5187A0A5C0022A80B /* GeoFakeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FF96F0D4187A0A5C0022A80B /* GeoFakeTests.m */; };
+		FF9A6D7D187F939500984E8A /* CLFakeHeading.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9A6D7A187F939500984E8A /* CLFakeHeading.m */; };
+		FF9A6D7E187F939500984E8A /* CLLocationManager+GeoFake.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9A6D7B187F939500984E8A /* CLLocationManager+GeoFake.m */; };
+		FF9A6D7F187F939500984E8A /* CMFakeMotionActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9A6D7C187F939500984E8A /* CMFakeMotionActivity.m */; };
+		FF9A6D82187F93B100984E8A /* GFLocationProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9A6D81187F93B100984E8A /* GFLocationProvider.m */; };
+		FF9A6D84187F93B900984E8A /* MKMapView+GeoFake.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9A6D83187F93B900984E8A /* MKMapView+GeoFake.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FF96F0CB187A0A5C0022A80B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF96F0AD187A0A5C0022A80B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF96F0B4187A0A5C0022A80B;
+			remoteInfo = GeoFake;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FF96F0B3187A0A5C0022A80B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FF96F0B5187A0A5C0022A80B /* libGeoFake.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGeoFake.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF96F0B8187A0A5C0022A80B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FF96F0BC187A0A5C0022A80B /* GeoFake-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GeoFake-Prefix.pch"; sourceTree = "<group>"; };
+		FF96F0BF187A0A5C0022A80B /* GeoFake.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoFake.m; sourceTree = "<group>"; };
+		FF96F0C5187A0A5C0022A80B /* GeoFakeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoFakeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF96F0C6187A0A5C0022A80B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FF96F0C9187A0A5C0022A80B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		FF96F0D0187A0A5C0022A80B /* GeoFakeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GeoFakeTests-Info.plist"; sourceTree = "<group>"; };
+		FF96F0D2187A0A5C0022A80B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FF96F0D4187A0A5C0022A80B /* GeoFakeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoFakeTests.m; sourceTree = "<group>"; };
+		FF96F0E3187A0C560022A80B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF96F0E9187A0F140022A80B /* GeoFake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoFake.h; sourceTree = "<group>"; };
+		FF9A6D7A187F939500984E8A /* CLFakeHeading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLFakeHeading.m; sourceTree = "<group>"; };
+		FF9A6D7B187F939500984E8A /* CLLocationManager+GeoFake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocationManager+GeoFake.m"; sourceTree = "<group>"; };
+		FF9A6D7C187F939500984E8A /* CMFakeMotionActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMFakeMotionActivity.m; sourceTree = "<group>"; };
+		FF9A6D80187F93AB00984E8A /* GeoFakeCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoFakeCommon.h; sourceTree = "<group>"; };
+		FF9A6D81187F93B100984E8A /* GFLocationProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFLocationProvider.m; sourceTree = "<group>"; };
+		FF9A6D83187F93B900984E8A /* MKMapView+GeoFake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+GeoFake.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FF96F0B2187A0A5C0022A80B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF96F0B9187A0A5C0022A80B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF96F0C2187A0A5C0022A80B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF96F0CD187A0A5C0022A80B /* libGeoFake.a in Frameworks */,
+				FF96F0C7187A0A5C0022A80B /* XCTest.framework in Frameworks */,
+				FF96F0CA187A0A5C0022A80B /* UIKit.framework in Frameworks */,
+				FF96F0C8187A0A5C0022A80B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FF96F0AC187A0A5C0022A80B = {
+			isa = PBXGroup;
+			children = (
+				FF96F0BA187A0A5C0022A80B /* GeoFake */,
+				FF96F0CE187A0A5C0022A80B /* GeoFakeTests */,
+				FF96F0B7187A0A5C0022A80B /* Frameworks */,
+				FF96F0B6187A0A5C0022A80B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FF96F0B6187A0A5C0022A80B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF96F0B5187A0A5C0022A80B /* libGeoFake.a */,
+				FF96F0C5187A0A5C0022A80B /* GeoFakeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FF96F0B7187A0A5C0022A80B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF96F0B8187A0A5C0022A80B /* Foundation.framework */,
+				FF96F0C6187A0A5C0022A80B /* XCTest.framework */,
+				FF96F0C9187A0A5C0022A80B /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF96F0BA187A0A5C0022A80B /* GeoFake */ = {
+			isa = PBXGroup;
+			children = (
+				FF96F0DE187A0AB20022A80B /* Headers */,
+				FF96F0BF187A0A5C0022A80B /* GeoFake.m */,
+				FF9A6D7A187F939500984E8A /* CLFakeHeading.m */,
+				FF9A6D7B187F939500984E8A /* CLLocationManager+GeoFake.m */,
+				FF9A6D7C187F939500984E8A /* CMFakeMotionActivity.m */,
+				FF9A6D81187F93B100984E8A /* GFLocationProvider.m */,
+				FF9A6D83187F93B900984E8A /* MKMapView+GeoFake.m */,
+				FF9A6D80187F93AB00984E8A /* GeoFakeCommon.h */,
+				FF96F0BB187A0A5C0022A80B /* Supporting Files */,
+			);
+			path = GeoFake;
+			sourceTree = "<group>";
+		};
+		FF96F0BB187A0A5C0022A80B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF96F0BC187A0A5C0022A80B /* GeoFake-Prefix.pch */,
+				FF96F0E3187A0C560022A80B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FF96F0CE187A0A5C0022A80B /* GeoFakeTests */ = {
+			isa = PBXGroup;
+			children = (
+				FF96F0D4187A0A5C0022A80B /* GeoFakeTests.m */,
+				FF96F0CF187A0A5C0022A80B /* Supporting Files */,
+			);
+			path = GeoFakeTests;
+			sourceTree = "<group>";
+		};
+		FF96F0CF187A0A5C0022A80B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF96F0D0187A0A5C0022A80B /* GeoFakeTests-Info.plist */,
+				FF96F0D1187A0A5C0022A80B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FF96F0DE187A0AB20022A80B /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				FF96F0E9187A0F140022A80B /* GeoFake.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FF96F0B4187A0A5C0022A80B /* GeoFake */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF96F0D8187A0A5C0022A80B /* Build configuration list for PBXNativeTarget "GeoFake" */;
+			buildPhases = (
+				FF96F0B1187A0A5C0022A80B /* Sources */,
+				FF96F0B2187A0A5C0022A80B /* Frameworks */,
+				FF96F0B3187A0A5C0022A80B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeoFake;
+			productName = GeoFake;
+			productReference = FF96F0B5187A0A5C0022A80B /* libGeoFake.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		FF96F0C4187A0A5C0022A80B /* GeoFakeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF96F0DB187A0A5C0022A80B /* Build configuration list for PBXNativeTarget "GeoFakeTests" */;
+			buildPhases = (
+				FF96F0C1187A0A5C0022A80B /* Sources */,
+				FF96F0C2187A0A5C0022A80B /* Frameworks */,
+				FF96F0C3187A0A5C0022A80B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF96F0CC187A0A5C0022A80B /* PBXTargetDependency */,
+			);
+			name = GeoFakeTests;
+			productName = GeoFakeTests;
+			productReference = FF96F0C5187A0A5C0022A80B /* GeoFakeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FF96F0AD187A0A5C0022A80B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Newton Japan";
+				TargetAttributes = {
+					FF96F0C4187A0A5C0022A80B = {
+						TestTargetID = FF96F0E4187A0D640022A80B;
+					};
+				};
+			};
+			buildConfigurationList = FF96F0B0187A0A5C0022A80B /* Build configuration list for PBXProject "GeoFake" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FF96F0AC187A0A5C0022A80B;
+			productRefGroup = FF96F0B6187A0A5C0022A80B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FF96F0B4187A0A5C0022A80B /* GeoFake */,
+				FF96F0C4187A0A5C0022A80B /* GeoFakeTests */,
+				FF96F0E4187A0D640022A80B /* GeoFake.framework */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FF96F0C3187A0A5C0022A80B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF96F0D3187A0A5C0022A80B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FF96F0E8187A0DB80022A80B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# 環境変数\nINFO_PLIST=\"Info.plist\"\nFRAMEWORK_NAME=${PROJECT_NAME}\nFRAMEWORK_VERSION_NUMBER=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" ${SRCROOT}/${PROJECT_NAME}/${INFO_PLIST})\nFRAMEWORK_VERSION=A\nFRAMEWORK_BUILD_PATH=\"${SRCROOT}/build/${CONFIGURATION}-framework\"\nFRAMEWORK_DIR=\"${FRAMEWORK_BUILD_PATH}/${FRAMEWORK_NAME}.framework\"\nFRAMEWORK_PACKAGE_NAME=\"${FRAMEWORK_NAME}.${FRAMEWORK_VERSION_NUMBER}.zip\"\n\n# ディレクトリをクリーン\n[ -d \"${FRAMEWORK_BUILD_PATH}\" ] && rm -rf \"${FRAMEWORK_BUILD_PATH}\"\n\n# 実機、シミュレーター用ターゲット設定\nxcodebuild -project ${PROJECT_NAME}.xcodeproj \\\n-sdk iphonesimulator${IPHONEOS_DEPLOYMENT_TARGET} \\\n-target \"${PROJECT_NAME}\" \\\n-configuration ${CONFIGURATION} clean build\n\nxcodebuild -project ${PROJECT_NAME}.xcodeproj \\\n-sdk iphoneos${IPHONEOS_DEPLOYMENT_TARGET} \\\n-target \"${PROJECT_NAME}\" \\\n-configuration ${CONFIGURATION} clean build\n\n# フレームワーク用ディレクトリ作成\nmkdir -p ${FRAMEWORK_DIR}\nmkdir -p ${FRAMEWORK_DIR}/Versions\nmkdir -p ${FRAMEWORK_DIR}/Versions/${FRAMEWORK_VERSION}\nmkdir -p ${FRAMEWORK_DIR}/Versions/${FRAMEWORK_VERSION}/Resources\nmkdir -p ${FRAMEWORK_DIR}/Versions/${FRAMEWORK_VERSION}/Headers\n\n# シンボリックリンク作成\nln -s ${FRAMEWORK_DIR}/Versions/${FRAMEWORK_VERSION} ${FRAMEWORK_DIR}/Versions/Current\nln -s ${FRAMEWORK_DIR}/Versions/Current/Headers ${FRAMEWORK_DIR}/Headers\nln -s ${FRAMEWORK_DIR}/Versions/Current/Resources ${FRAMEWORK_DIR}/Resources\nln -s ${FRAMEWORK_DIR}/Versions/Current/${FRAMEWORK_NAME} ${FRAMEWORK_DIR}/${FRAMEWORK_NAME}\n\n# 実機、シミュレーター用HelloWorldKit.a作成\nlipo -create \\\n${SRCROOT}/build/${CONFIGURATION}-iphoneos/lib${FRAMEWORK_NAME}.a \\\n${SRCROOT}/build/${CONFIGURATION}-iphonesimulator/lib${FRAMEWORK_NAME}.a \\\n-output \"${FRAMEWORK_DIR}/Versions/Current/${FRAMEWORK_NAME}\"\n\n# 実機、シミュレーター用libGeoFake.a作成\nlipo -create \\\n${SRCROOT}/build/${CONFIGURATION}-iphoneos/lib${FRAMEWORK_NAME}.a \\\n${SRCROOT}/build/${CONFIGURATION}-iphonesimulator/lib${FRAMEWORK_NAME}.a \\\n-output \"${SRCROOT}/build/lib${FRAMEWORK_NAME}.a\"\n\n# ファイルをコピーして最後にzip作成\nls ${SRCROOT}/${PROJECT_NAME}/Headers/*.h > /dev/null 2>&1 && cp ${SRCROOT}/${PROJECT_NAME}/Headers/*.h ${FRAMEWORK_DIR}/Headers/\n                                      cp ${SRCROOT}/${PROJECT_NAME}/${INFO_PLIST} ${FRAMEWORK_DIR}/Resources\n                                      \n                                      \n                                      cd ${FRAMEWORK_BUILD_PATH}\n                                      zip -ry ${FRAMEWORK_PACKAGE_NAME} $(basename $FRAMEWORK_DIR)\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FF96F0B1187A0A5C0022A80B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF9A6D7D187F939500984E8A /* CLFakeHeading.m in Sources */,
+				FF9A6D84187F93B900984E8A /* MKMapView+GeoFake.m in Sources */,
+				FF1879CF1925676700E05950 /* GeoFake.m in Sources */,
+				FF9A6D82187F93B100984E8A /* GFLocationProvider.m in Sources */,
+				FF9A6D7E187F939500984E8A /* CLLocationManager+GeoFake.m in Sources */,
+				FF9A6D7F187F939500984E8A /* CMFakeMotionActivity.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF96F0C1187A0A5C0022A80B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF96F0D5187A0A5C0022A80B /* GeoFakeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FF96F0CC187A0A5C0022A80B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF96F0B4187A0A5C0022A80B /* GeoFake */;
+			targetProxy = FF96F0CB187A0A5C0022A80B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FF96F0D1187A0A5C0022A80B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF96F0D2187A0A5C0022A80B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FF96F0D6187A0A5C0022A80B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FF96F0D7187A0A5C0022A80B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF96F0D9187A0A5C0022A80B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/GeoFake.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GeoFake/GeoFake-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		FF96F0DA187A0A5C0022A80B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/GeoFake.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GeoFake/GeoFake-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		FF96F0DC187A0A5C0022A80B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GeoFake/GeoFake-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "GeoFakeTests/GeoFakeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		FF96F0DD187A0A5C0022A80B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GeoFake/GeoFake-Prefix.pch";
+				INFOPLIST_FILE = "GeoFakeTests/GeoFakeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		FF96F0E6187A0D640022A80B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FF96F0E7187A0D640022A80B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FF96F0B0187A0A5C0022A80B /* Build configuration list for PBXProject "GeoFake" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF96F0D6187A0A5C0022A80B /* Debug */,
+				FF96F0D7187A0A5C0022A80B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF96F0D8187A0A5C0022A80B /* Build configuration list for PBXNativeTarget "GeoFake" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF96F0D9187A0A5C0022A80B /* Debug */,
+				FF96F0DA187A0A5C0022A80B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF96F0DB187A0A5C0022A80B /* Build configuration list for PBXNativeTarget "GeoFakeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF96F0DC187A0A5C0022A80B /* Debug */,
+				FF96F0DD187A0A5C0022A80B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF96F0E5187A0D640022A80B /* Build configuration list for PBXAggregateTarget "GeoFake.framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF96F0E6187A0D640022A80B /* Debug */,
+				FF96F0E7187A0D640022A80B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FF96F0AD187A0A5C0022A80B /* Project object */;
+}
