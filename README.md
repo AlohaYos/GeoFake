@@ -3,6 +3,8 @@ GeoFake.framework
 
 Simulate Location and Motion information for Debugging iOS apps. GeoFake framework works with <a href="http://newtonjapan.com/GeoPlayer/" target=_blank>GeoPlayer</a>.
 
+GeoPlayer@GitHub: https://github.com/AlohaYos/GeoPlayer
+
 <img src="http://newtonjapan.com/GeoPlayer/wp-content/uploads/2014/01/debug_desk.png" alt="debug_desk" title="debug_desk" width="500" height="278" class="alignnone size-full wp-image-328" />
 
 If you ever build your iOS app using GPS, you probably experienced the difficulty of debugging it on the desk.
