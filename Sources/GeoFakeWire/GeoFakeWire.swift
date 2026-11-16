@@ -1,4 +1,4 @@
-// 通信の約束（Mac と GeoFake の間。TCP の上に1行1つの JSON）。説明は docs/wire-protocol.md。
+// 通信の約束（Mac と GeoFake の間。TCP の上に1行1つの JSON）。各行の形はこのファイルの型のとおり。
 //
 // - どの行も type 欄で種類を見分ける
 // - 時刻は Unix 秒（1970-01-01T00:00:00Z からの秒、小数あり）
@@ -6,7 +6,7 @@
 //
 // iOS では DEBUG のときだけ中身がある。Xcode は Swift Package を .o のまま開発者のアプリにリンクするので、
 // 使っていなくても型の情報が丸ごと残る。開発者のアプリのリリースのビルドに通信の約束を残さないため
-// （2026-11-16 GeoFakeProbe の Release を nm で確認）。Mac 版（macOS）はいつでも使える。
+// （リリースのビルドを nm で確かめ、型の名前が残らないことを確認済み）。Mac 版（macOS）はいつでも使える。
 
 #if os(macOS) || DEBUG
 import Foundation
@@ -121,7 +121,7 @@ public enum WireProximity: String, Codable, Sendable, CaseIterable {
     case unknown, immediate, near, far
 }
 
-/// Mac → GeoFake。ビーコン1つ（ステップ6 で使う）
+/// Mac → GeoFake。ビーコン1つ（type が beacon の行。1行に1つ）
 public struct WireBeacon: Codable, Sendable, Equatable {
     /// 時刻（Unix 秒）
     public var t: Double?
