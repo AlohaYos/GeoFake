@@ -1,130 +1,116 @@
-GeoFake.framework
-=======
+# GeoFake
 
-Simulate Location and Motion information for Debugging iOS apps. GeoFake framework works with <a href="http://newtonjapan.com/GeoPlayer/" target=_blank>GeoPlayer</a>.
+> GeoFake 3.0 is a complete rewrite in Swift and is not compatible with 1.x. If you want to keep using 1.x, point to the tag [`1.x-final`](https://github.com/AlohaYos/GeoFake/tree/1.x-final).
 
-GeoPlayer@GitHub: https://github.com/AlohaYos/GeoPlayer
+GeoFake is a small Swift package that lets [GeoPlayer for Mac](https://newtonjapan.com/geoplayer/) feed recorded **heading**, **motion activity** and **iBeacons** into your iOS app while you debug it. Your app keeps using the normal Core Location and Core Motion APIs; GeoFake hands the replayed values to the same delegate and handler.
 
-<img src="http://newtonjapan.com/GeoPlayer/wp-content/uploads/2014/01/debug_desk.png" alt="debug_desk" title="debug_desk" width="500" height="278" class="alignnone size-full wp-image-328" />
+Location itself is not GeoFake's job: GeoPlayer replays location through the OS (Xcode's location simulation, `simctl` / `devicectl`), so `CLLocationManager`, `MapKit` and everything else see it as real.
 
-If you ever build your iOS app using GPS, you probably experienced the difficulty of debugging it on the desk.
+## Requirements
 
-Unless testing your app in outdoor field, you can not realize unstable behavior of GPS, Cell-tower and WiFi.
+- iOS 17 or later
+- Swift 6.2 toolchain (Xcode 26 or later)
+- [GeoPlayer for Mac](https://newtonjapan.com/geoplayer/), which records and replays the values
 
-Your fitness app draw your running route on the map exactly ?<br />
-Your travel app get correct information while you are walking around ?<br />
-These apps need moving-around-test in outdoor many times.
+## Setup
 
-For such case, iOS simulator has location-simulation debug feature.
-But that simulation is not good enouth, because it is NOT using real information.
+### 1. Add the package
 
-<img src="http://newtonjapan.com/GeoPlayer/wp-content/uploads/2014/01/DiamondheadRun.png" alt="DiamondheadRun" title="DiamondheadRun" width="500" height="333" class="alignnone size-full wp-image-329" />
+In Xcode, choose File > Add Package Dependencies…, enter `https://github.com/AlohaYos/GeoFake`, and choose "Up to Next Major Version" from `3.0.0`. Link the `GeoFake` library to your app target.
 
-<strong>Playback real GPS movement</strong>
+Or in `Package.swift`:
 
-GPS signal jumps from entrance to exit of tunnel, for example.
-<a href="http://newtonjapan.com/GeoPlayer/" target=_blank>GeoPlayer</a> can record such unusual behaviors and can playback them.
-These recording data will be very important debug resource for your job on the desk.
+```swift
+dependencies: [
+    .package(url: "https://github.com/AlohaYos/GeoFake", from: "3.0.0"),
+],
+```
 
-<img src="http://newtonjapan.com/GeoPlayer/wp-content/uploads/2014/01/connect_iphones.png" alt="connect_iphones" title="connect_iphones" width="489" height="343" class="alignnone size-full wp-image-354" />
+### 2. Call `GeoFake.start()` once
 
-<strong>Playback GPX data</strong>
+Call it early, for example in your `App` initializer or `application(_:didFinishLaunchingWithOptions:)`:
 
-<a href="http://newtonjapan.com/GeoPlayer/" target=_blank>GeoPlayer</a> playbacks GPX data and playback speed is same as recording speed.
-If you have marathon data of three-hour-finisher in iPhone(A), you can playback it in three hours and send location information of each second to iPhone(B) via Bluetooth.
+```swift
+#if DEBUG
+import GeoFake
+#endif
 
-iPhone(B) receives that location information and act as if running that marathon right now. You can debug your GPS app in iPhone(B) using information from iPhone(A) like this.
+@main
+struct MyApp: App {
+    init() {
+        #if DEBUG
+        GeoFake.start()
+        #endif
+    }
+    // ...
+}
+```
 
-<strong>Playback motion data</strong>
+That is the only line you need. Wrapping the import and the call in `#if DEBUG` is recommended (see "Release builds" below). Calling `start()` more than once does nothing.
 
-Also <a href="http://newtonjapan.com/GeoPlayer/" target=_blank>GeoPlayer</a> can send motion information to iPhone(B). When using iPhone with M7 processor, <a href="http://newtonjapan.com/GeoPlayer/" target=_blank>GeoPlayer</a> can record location and motion data at the same time. Motion data are activities like walking, running or stopping.
+### 3. Connect
 
-<img src="http://newtonjapan.com/GeoPlayer/wp-content/uploads/2014/01/debug_code.png" alt="debug_code" title="debug_code" width="500" height="330" class="alignnone size-full wp-image-333" />
+- **Device**: connect the iPhone to the Mac with a USB cable and run your app from Xcode. GeoPlayer for Mac finds it over USB (usbmux). No Wi-Fi, no local network permission and no Info.plist changes are needed.
+- **Simulator**: nothing to set up. The simulator shares the Mac's `localhost`, and GeoPlayer connects there. Several simulators can run at the same time.
 
-<strong>Geo fence debugging</strong>
+Then pick your app in GeoPlayer for Mac and play a recording.
 
-Using <a href="http://newtonjapan.com/GeoPlayer/" target=_blank>GeoPlayer</a> and GeoFake framework, you can test your GeoFence app on the desk.
+## What GeoFake delivers
 
-<strong>Precise simulation in manual mode</strong>
+| Data | How your app receives it | Notes |
+|---|---|---|
+| Heading | `CLLocationManagerDelegate.locationManager(_:didUpdateHeading:)` | Magnetic heading, true heading (negative when unknown), accuracy and timestamp from the recording. `headingFilter` is respected. |
+| Motion activity | The handler passed to `CMMotionActivityManager.startActivityUpdates(to:withHandler:)` | stationary / walking / running / automotive / cycling / unknown, confidence and start date. The handler runs on the `OperationQueue` you passed, just like Core Motion. |
+| Availability | `CLLocationManager.headingAvailable()` and `CMMotionActivityManager.isActivityAvailable()` return `true` | Also on the simulator, so code that checks availability first still runs. |
+| iBeacon ranging | `locationManager(_:didRange:satisfying:)` for `startRangingBeacons(satisfying:)` | About once a second while GeoPlayer sends beacons, with UUID, major, minor, proximity, accuracy and RSSI. `CLLocationManager.isRangingAvailable()` returns `true`, also on the simulator. |
+| iBeacon regions | `didEnterRegion`, `didExitRegion` and `didDetermineState` for `startMonitoring(for:)` with a `CLBeaconRegion`; `requestState(for:)` | A region is entered when a matching beacon appears and exited about 3 seconds after the last one disappears. Other region types (circular regions) are not touched. |
 
-<a href="http://newtonjapan.com/GeoPlayer/" target=_blank>GeoPlayer</a> has manual operation mode. When you move <a href="http://newtonjapan.com/GeoPlayer/" target=_blank>GeoPlayer</a>'s map with your finger, the map of iPhone(B) will follow your finger movement. So, you can simulate location precisely while debugging.
+What GeoFake does **not** deliver:
 
-<hr />
+| Data | Why |
+|---|---|
+| Altitude | The OS location simulation always reports altitude 0 (vertical accuracy fixed). GeoFake does not touch location, so recorded altitude is not replayed. |
+| Raw sensors (accelerometer, gyro, magnetometer, pedometer) | Not recorded by GeoPlayer. |
+| Motion authorization | `CMMotionActivityManager.authorizationStatus()` is not changed. If your app stops when motion access is denied, it will stop before receiving replayed values. |
+| Beacons for `CLMonitor` | `CLMonitor.BeaconIdentityCondition` events can't be created from outside Core Location, so GeoFake can't deliver them. Use `CLLocationManager` ranging and `CLBeaconRegion` monitoring to test beacon features with GeoPlayer. |
+| Beacons through the deprecated APIs | `startRangingBeacons(in:)` (iOS 7–13) is not replaced. Use `startRangingBeacons(satisfying:)`. |
 
-<strong>How to debug your GPS/Motion app with GeoFake.framework</strong>
+### While GeoPlayer is connected
 
-<a href="http://newtonjapan.com/GeoPlayer/debug-motion-app-with-geoplayer" target=_blank>Video tutorial available here.</a>
+- When GeoPlayer starts sending heading or motion, GeoFake pauses the real updates of that kind, so real and replayed values never mix.
+- When GeoPlayer sends stop, or the connection closes, GeoFake restarts the real updates you asked for.
+- When your app goes to the background, GeoFake stops listening and closes the connection. When it comes back to the foreground, GeoFake listens again and GeoPlayer reconnects.
 
-  1. add Framework
- 
-		GeoFake.framework
- 
-  2. import header file
- 
-		#import <GeoFake/GeoFake.h>
- 
-  3. initialize location update
+## Release builds
 
-		#ifdef	GEO_FAKE
-			[[GeoFake sharedFake] setLocationManager:_locationManager mapView:_mapView];
-			[[GeoFake sharedFake] startUpdatingLocation];
-			[[GeoFake sharedFake] startUpdatingHeading];
-		#else
-			[_locationManager startUpdatingLocation];
-			[_locationManager startUpdatingHeading];
-		#endif
+All of GeoFake's code is inside `#if DEBUG`. In a Release build, `GeoFake.start()` is an empty function and nothing else from GeoFake is compiled in: no method swizzling, no network listener, and no protocol types. (Checked with `nm` and `strings` on a stripped Release build of the sample app: no GeoFake symbols remain.)
 
-  4. initialize motion update (if needed)
+Wrapping the import and the call in `#if DEBUG` as shown above also keeps the empty function out of your Release binary.
 
-		void (^motionHandler)(CMMotionActivity *activity) = ^void(CMMotionActivity *activity){
-				_motionActivity = activity;		// whatever you need to do
-		};
+## Custom build configurations (Staging, etc.)
 
-			if([CMMotionActivityManager isActivityAvailable]) {
-		#ifdef	GEO_FAKE
-			  [[GeoFake sharedFake] startActivityUpdatesWithHandler:motionHandler];
-		#else
-				_activityManager = [[CMMotionActivityManager alloc]init];
-				[_activityManager startActivityUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:motionHandler];
-		#endif
-			}
- 
-  5. set link flag at "Build Settings"
- 
-		Linking
-			Other Linker Flags "-ObjC -all_load"
- 
-  6. build and run !
+Xcode decides how to build Swift packages from the **name** of your build configuration, not from your app's build settings. A package gets `DEBUG` only when the configuration name contains `Debug`.
 
-<hr />
+| Your configuration | GeoFake |
+|---|---|
+| `Debug` | Active |
+| `Release` | Empty |
+| `Staging` (even if it is a copy of Debug) | Empty — `GeoFake.start()` does nothing |
+| `Debug-Staging` | Active |
 
-<strong>How to connect with GeoPlayer</strong>
+If you want GeoFake in a custom configuration, include `Debug` in its name (for example rename `Staging` to `Debug-Staging`). Setting `DEBUG` in your app target's Active Compilation Conditions is not enough, because that setting does not reach package targets.
 
-<a href="http://newtonjapan.com/GeoPlayer/connect-to-geoplayer-clients" target=_blank>Please visit this website.</a>
+## How it works
 
-<hr />
+- GeoFake listens on TCP port 47800–47809 (the first free one), on the loopback interface only, so nobody on the same Wi-Fi network can send values.
+- It replaces `startUpdatingHeading`, `stopUpdatingHeading`, `headingAvailable`, `startActivityUpdates(to:withHandler:)`, `stopActivityUpdates`, `isActivityAvailable`, and for beacons `startRangingBeacons(satisfying:)`, `stopRangingBeacons(satisfying:)`, `startMonitoring(for:)`, `stopMonitoring(for:)`, `requestState(for:)`, `isRangingAvailable` and `isMonitoringAvailable(for:)`, using public Objective-C runtime functions. No private API is used.
+- Values are delivered as subclasses of `CLHeading`, `CMMotionActivity` and `CLBeacon`. They support `copy()`, `isEqual(_:)`, `hash` and `NSSecureCoding` like the originals.
+- The line protocol between the Mac and GeoFake lives in the `GeoFakeWire` library of this package.
 
-<strong>GeoFake Class Interface</strong>
-<pre><code>@interface GeoFake : NSObject<br />
-// Shared instance
-+ (GeoFake *)sharedFake;
+## Sample app
 
-// Fake CoreLocation (Location update)
-- (void)setLocationManager:(CLLocationManager*)locMan mapView:(MKMapView*)mapView;
-- (void)startUpdatingLocation;
-- (void)stopUpdatingLocation;
-- (void)startUpdatingHeading;
-- (void)stopUpdatingHeading;
+The `SampleApp` folder of this repository holds GeoFake Sample, a small SwiftUI app that shows the replayed heading, motion activity and beacons, and tells you when you enter or leave circular fences. It refers to this package by a local path, so open `SampleApp/GeoFakeSample.xcodeproj`, choose your own team for signing if you run it on a device, and run it. The project is generated with [XcodeGen](https://github.com/yonaskolb/XcodeGen) from `SampleApp/project.yml`.
 
-// Fake CoreLocation (Region monitoring)
-- (void)startMonitoringForRegion:(CLRegion *)region;
-- (void)stopMonitoringForRegion:(CLRegion *)region;
-- (NSSet*)monitoredRegions;
-- (void)requestStateForRegion:(CLRegion *)region;
+## License
 
-// Fake CoreMotion (Motion activity)
-- (void)startActivityUpdatesWithHandler:(CMMotionActivityHandler)handler;
-- (void)stopActivityUpdates;
-
-@end
-</code></pre>
+MIT. See [LICENSE](LICENSE).

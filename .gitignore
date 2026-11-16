@@ -1,4 +1,6 @@
+.DS_Store
+.build/
+.swiftpm/
 DerivedData/
-*.xcsettings
-*.xcscheme
-Code/GeoFake/GeoFake-Prefix.pch
+xcuserdata/
+Package.resolved
