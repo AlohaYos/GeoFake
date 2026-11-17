@@ -107,9 +107,14 @@ If you want GeoFake in a custom configuration, include `Debug` in its name (for 
 - Values are delivered as subclasses of `CLHeading`, `CMMotionActivity` and `CLBeacon`. They support `copy()`, `isEqual(_:)`, `hash` and `NSSecureCoding` like the originals.
 - The line protocol between the Mac and GeoFake lives in the `GeoFakeWire` library of this package.
 
-## Sample app
+## Sample apps
 
-The `SampleApp` folder of this repository holds GeoFake Sample, a small SwiftUI app that shows the replayed heading, motion activity and beacons, and tells you when you enter or leave circular fences. It refers to this package by a local path, so open `SampleApp/GeoFakeSample.xcodeproj`, choose your own team for signing if you run it on a device, and run it. The project is generated with [XcodeGen](https://github.com/yonaskolb/XcodeGen) from `SampleApp/project.yml`.
+Both samples refer to this package by a local path, so open the project, choose your own team for signing if you run it on a device, and run it. The projects are generated with [XcodeGen](https://github.com/yonaskolb/XcodeGen) from the `project.yml` in each folder.
+
+| Folder | App | What it shows |
+|---|---|---|
+| `SampleApp` | GeoFake Sample (`SampleApp/GeoFakeSample.xcodeproj`) | The replayed heading, motion activity and beacons, and when you enter or leave circular fences |
+| `ArrivalApp` | Arrival Alerts (`ArrivalApp/GeoFakeArrival.xcodeproj`) | Long-press the map to pin spots. When a replayed route enters or leaves a spot, a notification says how you got there ("Arrived at Cafe on foot", "Arrived at Parking by car"). The location comes from GeoPlayer through the OS location simulation; the way you move comes through GeoFake |
 
 ## License
 
