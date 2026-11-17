@@ -109,12 +109,13 @@ If you want GeoFake in a custom configuration, include `Debug` in its name (for 
 
 ## Sample apps
 
-Both samples refer to this package by a local path, so open the project, choose your own team for signing if you run it on a device, and run it. The projects are generated with [XcodeGen](https://github.com/yonaskolb/XcodeGen) from the `project.yml` in each folder.
+All samples refer to this package by a local path, so open the project, choose your own team for signing if you run it on a device, and run it. The projects are generated with [XcodeGen](https://github.com/yonaskolb/XcodeGen) from the `project.yml` in each folder.
 
 | Folder | App | What it shows |
 |---|---|---|
 | `SampleApp` | GeoFake Sample (`SampleApp/GeoFakeSample.xcodeproj`) | The replayed heading, motion activity and beacons, and when you enter or leave circular fences |
 | `ArrivalApp` | Arrival Alerts (`ArrivalApp/GeoFakeArrival.xcodeproj`) | Long-press the map to pin spots. When a replayed route enters or leaves a spot, a notification says how you got there ("Arrived at Cafe on foot", "Arrived at Parking by car"). The location comes from GeoPlayer through the OS location simulation; the way you move comes through GeoFake |
+| `StampRallyApp` | Stamp Rally (`StampRallyApp/GeoFakeStampRally.xcodeproj`) | A stamp book of sightseeing spots. Walk into a spot's circle to collect its stamp; arrive by car and it asks you to walk in instead. The location comes from GeoPlayer through the OS location simulation; whether you walked or drove comes through GeoFake |
 
 ## License
 

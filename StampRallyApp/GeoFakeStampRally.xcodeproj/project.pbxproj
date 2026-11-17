@@ -1,0 +1,456 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3CA70DAB651B753B62D9D722 /* Screens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333C82EE3F7619C58141A53E /* Screens.swift */; };
+		3E36ABA2D07952506D429423 /* RallyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D789275E3AA7621E03C4DB /* RallyModel.swift */; };
+		99479E7A10163258364191A1 /* GeoFakeStampRallyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908801737E1C0620EF4B0DA6 /* GeoFakeStampRallyApp.swift */; };
+		AA00405F6850B40F9296DC29 /* LogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21472E1C23A01DF3FF66D062 /* LogicTests.swift */; };
+		C9173BB9BCEA8F3930819EF3 /* GeoFake in Frameworks */ = {isa = PBXBuildFile; productRef = B547997C59ACB29BCF3231C6 /* GeoFake */; };
+		E0A1D34516D8997A24412BF8 /* Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D718947A6503F3A32053CA /* Logic.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E61CB816A6B74622A591C102 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E6AFD7C1582DB42CB85FEF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 98F2A586C0CEC6BA505FC563;
+			remoteInfo = GeoFakeStampRally;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		21472E1C23A01DF3FF66D062 /* LogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogicTests.swift; sourceTree = "<group>"; };
+		333C82EE3F7619C58141A53E /* Screens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screens.swift; sourceTree = "<group>"; };
+		36D718947A6503F3A32053CA /* Logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logic.swift; sourceTree = "<group>"; };
+		81B5BCE3A64628D29A40CCDD /* GeoFakeStampRally.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = GeoFakeStampRally.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		908801737E1C0620EF4B0DA6 /* GeoFakeStampRallyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoFakeStampRallyApp.swift; sourceTree = "<group>"; };
+		A6D789275E3AA7621E03C4DB /* RallyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RallyModel.swift; sourceTree = "<group>"; };
+		EAFED2A2CF701C0FEBACB585 /* GeoFakeStampRallyTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = GeoFakeStampRallyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF9FB694665CA6EB4DF60175 /* GeoFake */ = {isa = PBXFileReference; lastKnownFileType = folder; name = GeoFake; path = ..; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		94EEFFED1332E2D5499DA1A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9173BB9BCEA8F3930819EF3 /* GeoFake in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		164AE537B3F620DCE9B0585E /* GeoFakeStampRally */ = {
+			isa = PBXGroup;
+			children = (
+				908801737E1C0620EF4B0DA6 /* GeoFakeStampRallyApp.swift */,
+				36D718947A6503F3A32053CA /* Logic.swift */,
+				A6D789275E3AA7621E03C4DB /* RallyModel.swift */,
+				333C82EE3F7619C58141A53E /* Screens.swift */,
+			);
+			path = GeoFakeStampRally;
+			sourceTree = "<group>";
+		};
+		7DED7FF5688873D249DA0967 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				EF9FB694665CA6EB4DF60175 /* GeoFake */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		9DD98BD5791BB35B8FE22835 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				81B5BCE3A64628D29A40CCDD /* GeoFakeStampRally.app */,
+				EAFED2A2CF701C0FEBACB585 /* GeoFakeStampRallyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E6B20135179DD3CB49D11779 = {
+			isa = PBXGroup;
+			children = (
+				164AE537B3F620DCE9B0585E /* GeoFakeStampRally */,
+				FF8F45B7C9CE35F5287A2160 /* GeoFakeStampRallyTests */,
+				7DED7FF5688873D249DA0967 /* Packages */,
+				9DD98BD5791BB35B8FE22835 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FF8F45B7C9CE35F5287A2160 /* GeoFakeStampRallyTests */ = {
+			isa = PBXGroup;
+			children = (
+				21472E1C23A01DF3FF66D062 /* LogicTests.swift */,
+			);
+			path = GeoFakeStampRallyTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		98F2A586C0CEC6BA505FC563 /* GeoFakeStampRally */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C75F4583A31001BDFF87100 /* Build configuration list for PBXNativeTarget "GeoFakeStampRally" */;
+			buildPhases = (
+				4329DA1A6F728361293DB5CD /* Sources */,
+				94EEFFED1332E2D5499DA1A9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeoFakeStampRally;
+			packageProductDependencies = (
+				B547997C59ACB29BCF3231C6 /* GeoFake */,
+			);
+			productName = GeoFakeStampRally;
+			productReference = 81B5BCE3A64628D29A40CCDD /* GeoFakeStampRally.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B5868060E1E0444D42141892 /* GeoFakeStampRallyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD5F1E0B3A762A5FD55368BD /* Build configuration list for PBXNativeTarget "GeoFakeStampRallyTests" */;
+			buildPhases = (
+				02365BCE33FE6AD53A3224E2 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				21A1AE26A77EAFE5E432F4A4 /* PBXTargetDependency */,
+			);
+			name = GeoFakeStampRallyTests;
+			packageProductDependencies = (
+			);
+			productName = GeoFakeStampRallyTests;
+			productReference = EAFED2A2CF701C0FEBACB585 /* GeoFakeStampRallyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0E6AFD7C1582DB42CB85FEF1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					98F2A586C0CEC6BA505FC563 = {
+						ProvisioningStyle = Automatic;
+					};
+					B5868060E1E0444D42141892 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EE4490C3DAC09190F7397631 /* Build configuration list for PBXProject "GeoFakeStampRally" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = E6B20135179DD3CB49D11779;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				531B143F3AF9084776974EB3 /* XCLocalSwiftPackageReference ".." */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 9DD98BD5791BB35B8FE22835 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				98F2A586C0CEC6BA505FC563 /* GeoFakeStampRally */,
+				B5868060E1E0444D42141892 /* GeoFakeStampRallyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		02365BCE33FE6AD53A3224E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA00405F6850B40F9296DC29 /* LogicTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4329DA1A6F728361293DB5CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99479E7A10163258364191A1 /* GeoFakeStampRallyApp.swift in Sources */,
+				E0A1D34516D8997A24412BF8 /* Logic.swift in Sources */,
+				3E36ABA2D07952506D429423 /* RallyModel.swift in Sources */,
+				3CA70DAB651B753B62D9D722 /* Screens.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		21A1AE26A77EAFE5E432F4A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 98F2A586C0CEC6BA505FC563 /* GeoFakeStampRally */;
+			targetProxy = E61CB816A6B74622A591C102 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		24C9740B6B945A3A55E83533 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Stamp Rally";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Shows where you are and stamps a spot when you walk into it.";
+				INFOPLIST_KEY_NSMotionUsageDescription = "Checks that you arrived on foot. Arriving by car doesn't earn a stamp.";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.newtonjapan.geofakestamprally;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		3F9BF086A44978F6C9E08304 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 3.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		49B80BACE746C0DFACD37FD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.newtonjapan.geofakestamprally.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeoFakeStampRally.app/GeoFakeStampRally";
+			};
+			name = Release;
+		};
+		6C4D91CD018EE15A98E57B72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.newtonjapan.geofakestamprally.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeoFakeStampRally.app/GeoFakeStampRally";
+			};
+			name = Debug;
+		};
+		B1BB9242EE7A3E8006BF469F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Stamp Rally";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Shows where you are and stamps a spot when you walk into it.";
+				INFOPLIST_KEY_NSMotionUsageDescription = "Checks that you arrived on foot. Arriving by car doesn't earn a stamp.";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.newtonjapan.geofakestamprally;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		BB07B8BC8C553E9ED7278289 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 3.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8C75F4583A31001BDFF87100 /* Build configuration list for PBXNativeTarget "GeoFakeStampRally" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24C9740B6B945A3A55E83533 /* Debug */,
+				B1BB9242EE7A3E8006BF469F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		EE4490C3DAC09190F7397631 /* Build configuration list for PBXProject "GeoFakeStampRally" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F9BF086A44978F6C9E08304 /* Debug */,
+				BB07B8BC8C553E9ED7278289 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FD5F1E0B3A762A5FD55368BD /* Build configuration list for PBXNativeTarget "GeoFakeStampRallyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C4D91CD018EE15A98E57B72 /* Debug */,
+				49B80BACE746C0DFACD37FD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		531B143F3AF9084776974EB3 /* XCLocalSwiftPackageReference ".." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ..;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B547997C59ACB29BCF3231C6 /* GeoFake */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GeoFake;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 0E6AFD7C1582DB42CB85FEF1 /* Project object */;
+}

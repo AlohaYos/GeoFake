@@ -1,0 +1,53 @@
+# Stamp Rally: a GeoFake sample. Walk into a spot's circle to collect its stamp; arriving by car doesn't count.
+# Regenerate the Xcode project with:
+#   xcodegen generate --spec StampRallyApp/project.yml --project StampRallyApp
+name: GeoFakeStampRally
+options:
+  bundleIdPrefix: com.newtonjapan
+  deploymentTarget:
+    iOS: "17.0"
+configs:
+  Debug: debug
+  Release: release
+settings:
+  base:
+    CODE_SIGN_STYLE: Automatic
+    SWIFT_VERSION: "6.0"
+    MARKETING_VERSION: "3.0"
+    CURRENT_PROJECT_VERSION: "1"
+packages:
+  GeoFake:
+    path: ..
+targets:
+  GeoFakeStampRally:
+    type: application
+    platform: iOS
+    sources:
+      - GeoFakeStampRally
+    dependencies:
+      - package: GeoFake
+        product: GeoFake
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.newtonjapan.geofakestamprally
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Stamp Rally
+        INFOPLIST_KEY_NSLocationWhenInUseUsageDescription: "Shows where you are and stamps a spot when you walk into it."
+        INFOPLIST_KEY_NSMotionUsageDescription: "Checks that you arrived on foot. Arriving by car doesn't earn a stamp."
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
+        TARGETED_DEVICE_FAMILY: "1"
+    scheme:
+      testTargets:
+        - GeoFakeStampRallyTests
+  GeoFakeStampRallyTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - GeoFakeStampRallyTests
+    dependencies:
+      - target: GeoFakeStampRally
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.newtonjapan.geofakestamprally.tests
+        GENERATE_INFOPLIST_FILE: YES
